@@ -1,15 +1,23 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import java.util.Arrays;
+import java.util.List;
 
 public class RacingGame {
-    // 자동차 하나씩 진행
-    // 랜덤 숫자 받아야 함
-    // 랜덤 숫자가 4 이상이면 전진
+
+    public void playRound(List<Car> cars) {
+        cars.forEach((car) -> {
+            attemptToMove(car);
+            System.out.println(car);
+        });
+        System.out.println();
+    }
+
     public void attemptToMove(Car car) {
         int randomNumber = generateRandomNumber();
         // 임시 확인용
-        System.out.println(randomNumber);
+        System.out.println("랜덤 값" + randomNumber);
 
         if (randomNumber < 4) {
             return;

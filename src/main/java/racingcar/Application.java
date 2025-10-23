@@ -16,9 +16,7 @@ public class Application {
         // 임시 실행 테스트
         System.out.println(carsName);
         System.out.println(tryCount);
-        carList.forEach(System.out::println);
 
-        racingGame.attemptToMove(carList.get(0));
-        System.out.println(carList.get(0));
+        racingGame.playRound(carList);
     }
 }
