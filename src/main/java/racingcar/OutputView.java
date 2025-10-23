@@ -9,7 +9,7 @@ public class OutputView {
     }
 
     // 우승자 출력
-    public void printWinner(List<String> winners){
+    public void printWinner(List<String> winners) {
         String winnerMessage = String.join(", ", winners);
 
         System.out.print("최종 우승자 : " + winnerMessage);

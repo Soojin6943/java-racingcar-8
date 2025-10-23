@@ -6,12 +6,14 @@ import java.util.List;
 public class RacingGame {
     OutputView outputView = new OutputView();
 
+    // 레이스 시작 (시행 횟수만큼 라운드 진행)
     public void startRace(int tryCount, List<Car> cars) {
         for (int i = 0; i < tryCount; i++) {
             playRound(cars);
         }
     }
 
+    // 라운드 진행 (자동차들이 한 번씩 랜덤 전진 시도)
     public void playRound(List<Car> cars) {
         cars.forEach((car) -> {
             attemptToMove(car);
@@ -20,6 +22,7 @@ public class RacingGame {
         System.out.println();
     }
 
+    // 랜덤 전진 시도
     public void attemptToMove(Car car) {
         int randomNumber = generateRandomNumber();
 
@@ -29,6 +32,7 @@ public class RacingGame {
         car.moveForward();
     }
 
+    // 랜덤 수 생성
     public int generateRandomNumber() {
         return Randoms.pickNumberInRange(0, 9);
     }

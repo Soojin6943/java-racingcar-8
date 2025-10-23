@@ -9,6 +9,7 @@ public class Car {
         this.position = 0;
     }
 
+    // 전진
     public void moveForward() {
         this.position++;
     }
