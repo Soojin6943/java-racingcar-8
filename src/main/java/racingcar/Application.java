@@ -6,6 +6,7 @@ public class Application {
     public static void main(String[] args) {
         InputView inputView = new InputView();
         Cars cars = new Cars();
+        RacingGame racingGame = new RacingGame();
 
         String carsName = inputView.readCarName();
         int tryCount = inputView.readTryCount();
@@ -16,5 +17,8 @@ public class Application {
         System.out.println(carsName);
         System.out.println(tryCount);
         carList.forEach(System.out::println);
+
+        racingGame.attemptToMove(carList.get(0));
+        System.out.println(carList.get(0));
     }
 }
