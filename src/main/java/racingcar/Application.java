@@ -2,6 +2,11 @@ package racingcar;
 
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        InputView inputView = new InputView();
+
+        String carsName = inputView.readCarName();
+
+        // 임시 실행 테스트
+        System.out.println(carsName);
     }
 }
