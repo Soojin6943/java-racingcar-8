@@ -13,10 +13,6 @@ public class Application {
 
         List<Car> carList = cars.carParser(carsName);
 
-        // 임시 실행 테스트
-        System.out.println(carsName);
-        System.out.println(tryCount);
-
         racingGame.startRace(tryCount, carList);
     }
 }
