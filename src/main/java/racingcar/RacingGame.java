@@ -6,6 +6,12 @@ import java.util.List;
 
 public class RacingGame {
 
+    public void startRace(int tryCount, List<Car> cars) {
+        for (int i = 0; i < tryCount; i++) {
+            playRound(cars);
+        }
+    }
+
     public void playRound(List<Car> cars) {
         cars.forEach((car) -> {
             attemptToMove(car);

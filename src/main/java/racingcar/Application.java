@@ -17,6 +17,6 @@ public class Application {
         System.out.println(carsName);
         System.out.println(tryCount);
 
-        racingGame.playRound(carList);
+        racingGame.startRace(tryCount, carList);
     }
 }
