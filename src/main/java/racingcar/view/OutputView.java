@@ -1,6 +1,7 @@
-package racingcar;
+package racingcar.view;
 
 import java.util.List;
+import racingcar.model.Car;
 
 public class OutputView {
     // 게임 진행 중 출력

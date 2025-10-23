@@ -1,7 +1,8 @@
-package racingcar;
+package racingcar.model;
 
 import camp.nextstep.edu.missionutils.Randoms;
 import java.util.List;
+import racingcar.view.OutputView;
 
 public class RacingGame {
     OutputView outputView = new OutputView();
