@@ -14,13 +14,14 @@ public class RacingController {
         RacingGame racingGame = new RacingGame();
         OutputView outputView = new OutputView();
 
-        // 자동차 이름 및 시도 횟수 받기
+        // 자동차 이름 받기
         String carsName = inputView.readCarName();
+        // 차동차 이름 -> Car 리스트로 변환
+        List<Car> carList = cars.carParser(carsName);
+        // 시도 횟수 받기
         int tryCount = inputView.readTryCount();
 
         System.out.println("실행 결과");
-        // 차동차 이름 -> Car 리스트로 변환
-        List<Car> carList = cars.carParser(carsName);
 
         // 시도 횟수만큼 레이스 진행
         racingGame.startRace(tryCount, carList);
