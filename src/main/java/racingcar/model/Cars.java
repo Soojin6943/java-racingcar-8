@@ -8,6 +8,7 @@ public class Cars {
 
     // 입력받은 자동차들을 자동차 객체 리스트로 변환
     public List<Car> carParser(String carsName) {
+        CarValidator.validateComma(carsName);
         return Arrays.stream(carsName.split(","))
                 .map(String::trim)
                 .peek(CarValidator::validateCarName)
