@@ -2,6 +2,8 @@ package racingcar.view;
 
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
+import racingcar.model.TryCountValidator;
+
 public class InputView {
     // 경주 할 자동차 입력
     public String readCarName() {
@@ -12,6 +14,8 @@ public class InputView {
     // 시도 횟수 입력
     public int readTryCount() {
         System.out.println("시도할 횟수는 몇 회인가요?");
-        return Integer.parseInt(readLine());
+        String input = readLine();
+        TryCountValidator.validateTryCount(input);
+        return Integer.parseInt(input);
     }
 }
