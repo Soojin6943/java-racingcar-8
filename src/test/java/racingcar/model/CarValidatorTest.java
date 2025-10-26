@@ -19,4 +19,18 @@ class CarValidatorTest {
         assertThatThrownBy(() -> CarValidator.validateCarName(carName))
                 .isInstanceOf(IllegalArgumentException.class);
     }
+
+    @Test
+    void 컴마로_입력_시작() {
+        String carName = ", pobi";
+        assertThatThrownBy(() -> CarValidator.validateComma(carName))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    void 컴마로_입력_종료() {
+        String carName = "pobi,";
+        assertThatThrownBy(() -> CarValidator.validateComma(carName))
+                .isInstanceOf(IllegalArgumentException.class);
+    }
 }
